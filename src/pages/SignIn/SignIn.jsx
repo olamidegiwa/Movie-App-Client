@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./SignIn.css";
-import ShowEye from "../../components/ShowEye/ShowEye";
 import { useForm } from "react-hook-form";
 import AuthContext from "../../context/AuthContext";
 import Spinner from "../../utils/Spinner";
