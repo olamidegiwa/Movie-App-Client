@@ -1,7 +1,7 @@
 import React from "react";
 import useAuth from "../../hooks/useAuth";
 import { Link } from "react-router-dom";
-import "./Sidebar.css";
+import "./SideBar.css";
 
 const Dropdown = () => {
   const { token, handleLogOutUser } = useAuth();
