@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home/Home";
 import Movies from "./pages/Movies/Movies";
 import TvSeries from "./pages/TvSeries/TvSeries";
-import SignIn from "./pages/signin/signin";
+import SignIn from "./pages/Signin/Signin";
 import SignUp from "./pages/SignUp/SignUp";
 import Bookmak from "./pages/Bookmark/Bookmak";
 import Error from "./pages/Error/Error";
