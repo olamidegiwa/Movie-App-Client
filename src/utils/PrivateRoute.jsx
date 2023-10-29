@@ -7,6 +7,7 @@ const PrivateRoute = () => {
   const { token } = useContext(AuthContext);
 
   useEffect(() => {
+    console.log(token);
     if (!token) {
       toast.error("You have to login first", {
         id: "zzz",

@@ -7,7 +7,7 @@ import SearchResults from "../Home/SearchResults";
 import Loading from "../../utils/Loading";
 
 const Bookmak = () => {
-  const { token } = useAuth;
+  const { token } = useAuth();
   const { data, error, loading, updateUI } = useFetch("/api/bookmark", token);
   const { userInput, filteredMovies } = useCustomParams(data);
 
