@@ -13,6 +13,7 @@ const SignUp = () => {
   const { handleRegisterUser, authenticating } = useAuth();
 
   const btnText = authenticating ? <Spinner /> : "create an account";
+  
 
   const {
     register,

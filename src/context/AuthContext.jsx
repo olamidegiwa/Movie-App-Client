@@ -78,7 +78,7 @@ export const AuthProvider = ({ children }) => {
 
       setUser(data);
     } catch (error) {
-      if (error.message === "Network Eroor") {
+      if (error.message === "Network Error") {
       }
     }
   };
