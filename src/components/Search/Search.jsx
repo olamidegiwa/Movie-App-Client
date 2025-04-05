@@ -27,7 +27,7 @@ const Search = () => {
   }, [location]);
 
   return (
-    <div style={{ zIndex: "7" }} className="search position-relative my-3 mx-4">
+    <div style={{ zIndex: "2" }} className="search position-relative my-3 mx-4 ">
       <BiSearch className="position-absolute top-0 bottom-0 my-auto text-white fs-1 " />
       <input
         onChange={(e) => {

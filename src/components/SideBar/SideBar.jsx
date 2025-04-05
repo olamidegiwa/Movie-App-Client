@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { MdMovie, MdSpaceDashboard } from "react-icons/md";
-import { RiFilmFill } from "react-icons/ri";
-import { PiTelevisionFill } from "react-icons/pi";
-import { BsFillBookmarkFill } from "react-icons/bs";
+import TvSeries from "../../assets/tv-series-icon-27.jpg";
+import MovieIcon from "../../assets/movieIcon.png";
+import Bookmark from "../../assets/bookmark.png";
+import Movies from "../../assets/movies.jpeg";
+import Series from "../../assets/download.jpeg";
+import dropdown from "../../assets/dropdown-flat-color-outline-icon-free-png.webp";
 import "./SideBar.css";
-
-import logo from "../../assets/react.svg";
 import { Link, useLocation } from "react-router-dom";
 import Dropdown from "./Dropdown";
 
@@ -28,34 +28,51 @@ const SideBar = () => {
   }, [location]);
 
   return (
-    <div className="sidebar position-sticky top-0 d-flex flex-xl-column justify-content-between justify-content-xl-start gap-xl-5 px-4 py-4 custom-bg-light-grey mx-md-4">
+    <div style={{ zIndex: "7" }} className="sidebar position-sticky top-0 d-flex flex-xl-column justify-content-between justify-content-xl-start gap-xl-5 px-4 py-4 custom-bg-light-grey mx-md-4">
       <Link to="/">
-        <MdMovie className="fs-1 custom-text-red" />
+        <img
+          style={{ height: "32px", width: "32px" }}
+          src={MovieIcon}
+          alt="MoviesIcon"
+          className="fs-1 custom-text-red"
+        />
       </Link>
       <div className="d-flex flex-xl-column gap-3 gap-md-4">
         <Link to="/">
-          <MdSpaceDashboard
+          <img
+            src={TvSeries}
+            alt=""
+            style={{ height: "32px", width: "32px" }}
             className={`fs-1 ${
               selected === "/" ? "text-white" : "text-secondary"
             }`}
           />
         </Link>
         <Link to="/movies">
-          <RiFilmFill
+          <img
+            style={{ height: "32px", width: "32px" }}
+            src={Movies}
+            alt="MoviesIcon"
             className={`fs-1 ${
               selected === "/movies" ? "text-white" : "text-secondary"
             }`}
           />
         </Link>
         <Link to="/tvseries">
-          <PiTelevisionFill
+          <img
+            style={{ height: "32px", width: "32px" }}
+            src={Series}
+            alt="seriesIcon"
             className={`fs-1 ${
               selected === "/tvseries" ? "text-white" : "text-secondary"
             }`}
           />
         </Link>
         <Link to="/bookmark">
-          <BsFillBookmarkFill
+          <img
+            style={{ height: "32px", width: "32px" }}
+            src={Bookmark}
+            alt="bookmarkIcon"
             className={`fs-1 ${
               selected === "/bookmark" ? "text-white" : "text-secondary"
             }`}
@@ -63,12 +80,13 @@ const SideBar = () => {
         </Link>
       </div>
       <div className="mt-xl-auto position-relative">
-        <img 
+        <img
           onClick={() => {
             setToggleDropdown(!toggleDropdown);
           }}
-          src={logo}
+          src={dropdown}
           alt=""
+          style={{ height: "42px", width: "42px" }}
         />
         {toggleDropdown ? <Dropdown /> : null}
       </div>

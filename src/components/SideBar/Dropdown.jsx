@@ -6,14 +6,14 @@ import "./SideBar.css";
 const Dropdown = () => {
   const { token, handleLogOutUser } = useAuth();
   return (
-    <div className="position-absolute mt-3 my-dropdown ">
+    <div className="position-absolute mt-3 my-dropdown">
       {token ? (
-        <div>
+        <div className="dropdown">
           <button
             onClick={() => {
               handleLogOutUser();
             }}
-            className="btn btn-danger text-white"
+            className="btn btn-danger text-white "
           >
             LogOut
           </button>
@@ -23,7 +23,7 @@ const Dropdown = () => {
           <Link to="/signin" className="btn btn-danger text-white">
             SignIn
           </Link>
-          <Link to="/signup" className="btn btn-danger text-white">
+          <Link to="/signup" className="btn btn-danger text-white ">
             SignUp
           </Link>
         </div>
