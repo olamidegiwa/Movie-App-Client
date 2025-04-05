@@ -9,7 +9,7 @@
   }
 }
 .my-dropdown {
-  z-index: 20;
+  z-index: 50 !important;
   right: 0;
 }
 @media (width > 1200px) {

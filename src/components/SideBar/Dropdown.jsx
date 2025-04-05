@@ -6,7 +6,7 @@ import "./SideBar.css";
 const Dropdown = () => {
   const { token, handleLogOutUser } = useAuth();
   return (
-    <div className="position-absolute mt-3 my-dropdown">
+    <div className="position-absolute mt-3 my-dropdown ">
       {token ? (
         <div>
           <button
